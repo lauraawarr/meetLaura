@@ -2,44 +2,73 @@ window.addEventListener('load', init);
 
 function init(){
 
-	//remove loading gif and fade after page has loaded
-	// document.querySelector('.loading').remove();
+	setTimeout(smoothLoad, 3000);
+	//fades out loading elements and fades in header after page has loaded
+	function smoothLoad(){
+		document.querySelector('.loading').classList.add('fade');
+	}; //end smoothLoad
+
 
 	window.addEventListener('mousemove', follow);
 
 	function follow(ev){
 
-	var x = ev.clientX;
-	var y = ev.clientY;
+		var x = ev.clientX;
+		var y = ev.clientY;
+
+		//defines experience circles to trigger details on hover
+		var exp1 = document.querySelector('#third > .content > .one > .work > .circle');
+		var exp2 = document.querySelector('#third > .content > .two > .work > .circle');
+		var exp3 = document.querySelector('#third > .content > .three > .work > .circle');
+		var exp4 = document.querySelector('#third > .content > .four > .work > .circle');
+		var exp5 = document.querySelector('#third > .content > .five >.work > .circle');
+		var experience = [exp1, exp2, exp3, exp4, exp5];
+
+		//defines detail circles to appear on hover
+		var det1 = document.querySelector('#third > .content > .one');
+		var det2 = document.querySelector('#third > .content > .two');
+		var det3 = document.querySelector('#third > .content > .three');
+		var det4 = document.querySelector('#third > .content > .four');
+		var det5 = document.querySelector('#third > .content > .five');
+		var details = [det1, det2, det3, det4, det5];
+
+		var detailCircle, glowText;
+
+		//expands circle on hover to display details about each work element and adds shadow to text
+		function displayDetails(t){
+			t.style.zIndex = "1";
+			detailCircle = t.querySelector('.details');
+		 	detailCircle.classList.add('onhover');
+		 	glowText = t.querySelector('.work > .title');
+		 	glowText.style.textShadow = "2px 2px #87CEEB";
+
+		 	};
+		//hides circle with work details when not hovering and removes shadow from text
+		function hideDetails(t){
+			t.style.zIndex = null;
+		 	detailCircle = t.querySelector('.details');
+		 	detailCircle.classList.remove('onhover');
+		 	glowText = t.querySelector('.work > .title');
+		 	glowText.style.textShadow = "0px 0px #87CEEB";
+		 	};
+		
+		exp1.addEventListener('mouseenter', function(){displayDetails(det1);});
+		exp1.addEventListener('mouseleave', function(){hideDetails(det1);});
+
+		exp2.addEventListener('mouseenter', function(){displayDetails(det2);});
+		exp2.addEventListener('mouseleave', function(){hideDetails(det2);});
+
+		exp3.addEventListener('mouseenter', function(){displayDetails(det3);});
+		exp3.addEventListener('mouseleave', function(){hideDetails(det3);});
+
+		exp4.addEventListener('mouseenter', function(){displayDetails(det4);});
+		exp4.addEventListener('mouseleave', function(){hideDetails(det4);});
+
+		exp5.addEventListener('mouseenter', function(){displayDetails(det5);});
+		exp5.addEventListener('mouseleave', function(){hideDetails(det5);});
 	
-	// //defines first section circles
-	// var circle = document.querySelector('#first > .circle');
-	// var line1 = document.querySelector('#first > .one');
-	// var line2 = document.querySelector('#first > .two');
-	// var line3 = document.querySelector('#first > .three');
-
-	// //move circles with mouse
-	// circle.style.right = 10 - x* 0.01 + '%';
-	// line1.style.right = 10 - x* 0.005 + '%';
-	// line2.style.right = 10 - x* 0.005 + '%';
-	// line3.style.right = 10 - x* 0.0025 + '%';
-
-	// var thirdCircle1 = document.querySelector('#third > .content > .one');
-	// var thirdCircle2 = document.querySelector('#third > .content > .two');
-	// var thirdCircle3 = document.querySelector('#third > .content > .three');
-	// var thirdCircle4 = document.querySelector('#third > .content > .four');
-	// var thirdCircle5 = document.querySelector('#third > .content > .five');
-	// var thirdCircle6 = document.querySelector('#third > .content > .six');
-
-	// //move circles with scroll
-	// thirdCircle1.style.top =  y* 0.015 + '%';
-	// thirdCircle2.style.top = 10 + y* 0.025 + '%';
-	// thirdCircle3.style.top = 20 + y* 0.035 + '%';
-	// thirdCircle4.style.top = 30 + y* 0.045 + '%';
-	// thirdCircle5.style.top = 40 + y* 0.055 + '%';
-	// thirdCircle6.style.top = 50 + y* 0.065 + '%';	
-
-}; // end follow
+	
+	}; // end follow
 
 }; //end init
 

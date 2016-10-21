@@ -1,0 +1,631 @@
+/*STANDARD TAGS*/
+h1 {
+	color: white;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    opacity: 1;
+    font-family: "Syncopate", sans-serif;
+    text-shadow: 2px 2px 3px black;
+    }
+
+h2 {
+	font-weight: bold;
+    display: inline;
+    font-size: 20px;
+    opacity: 1;
+    font-family: "Syncopate", sans-serif;
+}
+
+h3 {color: white;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    opacity: 1;
+    font-family: "Syncopate", sans-serif;
+    } 
+
+ h4 {color: black;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    opacity: 1;
+    font-family: "Syncopate", sans-serif;
+    } 
+
+ p {
+ 	font-size: 14px;
+
+ }
+
+a:link{
+	color:black;
+	text-decoration: none;}
+
+a:visited{
+	color:black;
+	text-decoration: none;}
+
+a:hover{
+	color:#87CEEB;
+  	text-decoration: none;}
+
+/*CUSTOM GENERIC*/
+.banner{
+	text-align: center;
+}
+.banner h1{
+	position: relative;
+	z-index: 2;
+	font-size: 60px;
+	top: 45%;
+	margin: auto;
+}
+
+.bullet h3{
+	margin: 1px auto;
+	font-weight: bold;
+	color: black;
+	text-align: left;
+}
+
+.bullet h4{
+	margin: 5px auto;
+}
+
+.bullet img{
+	left: -20%;
+}
+
+.content {
+	font-family: 'Open sans', sans-serif;
+	font-size: 13px;
+	color: black;
+	padding: 20px 10px;
+}
+
+.float-left{
+	position: relative;
+	margin: 5% 0 0 20%;
+	max-width: 600px;
+}
+
+.float-center{
+	position: relative;
+	top: 80px;
+	z-index: 2;
+}
+
+/*LOADING ELEMENTS*/
+.loading{
+	display: flex;
+	justify-content: center;
+}
+
+.loading .content {
+	position: absolute;
+	/*text-align: center;*/
+}
+
+.loading h2 {
+	position: absolute;
+	text-align: center;
+	z-index: 1000;
+	color: white;
+	top: 300px;
+	left: -245px;
+	width: 500px;
+	font-family: "Syncopate", sans-serif;
+    text-shadow: 2px 2px 3px black;
+}
+
+#spinner {
+	z-index: 1000;
+	width: 480px;
+	height: 480px;
+	border-radius: 100%;
+	position: absolute;
+	border: 5px solid black;
+	animation: up 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function:linear;
+	transition:2s;
+	border-bottom:none;
+	border-right:none;
+	opacity: 0.6;
+	left: -235px;
+	top:85px;
+}
+
+@-webkit-keyframes up{
+   from{transform:rotate(0deg); }
+   to{transform:rotate(360deg);}
+ }
+
+@keyframes up{
+   from{transform:rotate(0deg); }
+   to{transform:rotate(360deg);}
+ }
+
+/*BODY ELEMENTS*/
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-width: 500px;
+	max-width: 1550px;
+	display: inline-block;
+    margin: 0px auto;
+	box-shadow:0px 5px 10px #1c1c1c;
+	font-family: "Syncopate", sans-serif;
+}
+
+body.home {
+	padding: 3rem;
+}
+
+body.page {
+	background-color: #eee ;
+}
+
+body.page.scroll {
+	background-attachment: fixed;
+	background-size: auto 150%;
+	overflow: visible;
+}
+
+/*HEADER*/
+#header{
+	position: relative;
+	background-attachment: fixed;
+	background-image: url('images/mountains.jpg'); 
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	min-height: 700px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}    
+
+#header h3 {
+	text-shadow: 2px 2px 3px black;
+}
+
+#header .container {
+  position: relative;
+  bottom: 210px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+#header .circle img{
+  height: 450px;
+  position: relative;
+  top: 100px;
+  opacity: 0.5;
+}
+
+#header #explore {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	bottom: 100px;
+	width: 100%;
+	font-family: "Syncopate", sans-serif;
+	vertical-align: bottom;
+
+  }
+
+ #header #explore .arrow{
+ 	position: fixed;
+ 	height: 50px;
+	bottom: 0.5em;
+ 	opacity: 0.7;
+ 	vertical-align: bottom;
+ }
+
+ #header #explore .circle{
+  	position: fixed;
+	height: 60px;
+	bottom: 0.5em;
+	vertical-align: bottom;
+ }
+
+/*FIRST SECTION*/
+#first{
+	position: relative;
+	height: 600px;
+	background-color: white;
+	background-attachment: fixed;
+	background-image: url('images/white_bg.jpg'); 
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#first .content {
+	display: flex;
+	margin: 2em;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#first .float-left {
+	max-width: 400px;
+	display: inline-block;
+	flex-grow: 1;
+	left: 0;
+	margin: auto 1em;
+}
+
+.profile{
+	display: inline-block;
+	width: 30%;
+	min-width: 300px;
+	max-width: 400px;
+	height: 400px;
+	border-radius: 0.5em; 
+	background-image: url('images/backpacking.jpg'); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0.5em;
+	flex-grow: 1;
+}
+#first .one{
+	background-image: url('images/camping.jpg'); 
+	background-position: 40% 50%;
+	-moz-transition: all 700ms ease-out;
+	-webkit-transition: all 700ms ease-out;
+	-o-transition: all 700ms ease-out;
+	transition: all 700ms ease-out;
+}
+
+@media screen and (max-width: 715px){
+	#first .content{
+	  flex-direction: column-reverse;
+	}
+	#first .profile{
+	  width:400px;
+	}
+	#first{
+	  height: 900px;
+	}
+}
+
+/*SECOND SECTION*/
+#second{
+	position: relative;
+	height: 300px;
+	background-attachment: fixed;
+	background-image: url('images/rock.jpg'); 
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+#second .content {
+	color: white;
+}
+
+#second .fade {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.3;
+	z-index: 1;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+}
+
+#second .float-left {
+	top: 10em;
+}
+
+/*THIRD SECTION*/
+#third {
+	position: relative;
+	height: 1000px;
+	background-color: white;
+	background-attachment: fixed;
+	background-image: url('images/white_bg.jpg'); 
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	overflow: hidden;
+	text-align: left;
+}
+
+#third .content {
+	height: 100%;
+	/*background-image:url("images/rock.jpg");
+	opacity: 0.2;*/
+}
+
+#third .circle {
+	position: absolute;
+	display: block;
+	width: 15%;
+	/*opacity: 0.7;*/
+}
+
+#third .one{
+	top: 10%;
+	left: 30%;
+}
+
+#third .two {
+	top: 26%;
+	left: 40%;
+}
+
+#third .three {
+	top: 42%;
+	left: 30%;
+}
+
+#third .four{
+	top: 58%;
+	left: 40%;
+}
+
+#third .five {
+	top: 74%;
+	left: 30%;
+}
+
+#third .five .details{
+	top: -32em;
+}
+
+#third .details{
+	position: absolute;
+	top: 7em;
+}
+
+#third .details .circle{
+	position: absolute;
+	width: 400px;
+	opacity: 1;
+}
+
+#third .details .text {
+	position: absolute;
+	color: white;
+	text-align: center;
+	width: 300px;
+	margin: 4em;
+}
+
+#third .details h3 {
+	color: white;
+	text-align: center;
+}
+
+
+/*FOURTH SECTION*/
+#fourth{
+	position: relative;
+	height: 300px;
+	background-attachment: fixed;
+	background-image: url('images/wood.jpg'); 
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+/*FIFTH SECTION*/
+#fifth {
+	position: relative;
+	height: 400px;
+	background-color: white;
+	background-attachment: fixed;
+	background-image: url('images/white_bg.jpg'); 
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	overflow: hidden;
+	text-align: left;
+}
+#fifth .circle {
+	position: absolute;
+	display: block;
+}
+
+#fifth .one {
+	top: 30%;
+	left: 25%;
+}
+#fifth .two {
+	top: 60%;
+	left: 35%;
+}
+
+/*FOOTER*/
+#footer{
+	position: relative;
+	height: 400px;
+	background-image: url('images/leaf4.jpg'); 
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+#footer .fadeBack{
+	  position: absolute;
+	  left: 0;
+	  top: 100px;
+	  bottom: 0;
+	  width: 100%;
+	  height: 200px;
+	  background: #000;
+	  opacity: 0.7;
+	  z-index: 1;
+}
+
+@media screen and (max-width: 580px){
+	#footer .fadeBack{
+	  height: 250px;
+	}
+}
+
+#footer .icons {
+	text-align: center;
+}
+
+
+/*ANIMATIONS*/
+
+.bounce-left {
+  opacity: 0;
+  -moz-transition: all 1000ms ease-out;
+  -webkit-transition: all 1000ms ease-out;
+  -o-transition: all 1000ms ease-out;
+  transition: all 1000ms ease-out;
+  -moz-transform: translate3d(200px, 0px, 0px);
+  -webkit-transform: translate3d(200px, 0px, 0px);
+  -o-transform: translate(200px, 0px);
+  -ms-transform: translate(200px, 0px);
+  transform: translate3d(200px, 0px, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-right {
+  opacity: 0;
+  -moz-transition: all 1000ms ease-out;
+  -webkit-transition: all 1000ms ease-out;
+  -o-transition: all 1000ms ease-out;
+  transition: all 1000ms ease-out;
+  -moz-transform: translate3d(-200px, 0px, 0px);
+  -webkit-transform: translate3d(-200px, 0px, 0px);
+  -o-transform: translate(-200px, 0px);
+  -ms-transform: translate(-200px, 0px);
+  transform: translate3d(-200px, 0px, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-up {
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200px, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.fade {
+	opacity: 0;
+	-moz-transition: all 2000ms ease-out;
+	-webkit-transition: all 2000ms ease-out;
+	-o-transition: all 2000ms ease-out;
+	transition: all 2000ms ease-out;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.float {
+	position: absolute;
+	display: block;
+	left: 20%;
+	max-width: 40em;
+	min-width: 30em;
+	-moz-transition: all 700ms ease-out;
+	-webkit-transition: all 700ms ease-out;
+	-o-transition: all 700ms ease-out;
+	transition: all 700ms ease-out;
+}
+
+.grow {
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.pulse {
+ 	opacity: 0;
+	-moz-transform: scale(0.7);
+  	-webkit-transform: scale(0.7);
+  	-o-transform: scale(0.7);
+  	-ms-transform: scale(0.7);
+  	transform: scale(0.7);
+	-moz-transition: all 1200ms ease-out;
+ 	-webkit-transition: all 1200ms ease-out;
+ 	-o-transition: all 1200ms ease-out;
+ 	transition: all 1200ms ease-out;
+ 	-webkit-backface-visibility: hidden;
+ 	-moz-backface-visibility: hidden;
+ 	backface-visibility: hidden;
+ }
+
+/*ANIMATION TRIGGERS*/
+
+ .in-view {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+ .oninterval {
+ 	opacity: 0.7;
+ 	-moz-transform: scale(1);
+  	-webkit-transform: scale(1);
+  	-o-transform: scale(1);
+  	-ms-transform: scale(1);
+  	transform: scale(1);
+ }
+
+ .onhover, .onload {
+	opacity: 1;
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
