@@ -179,7 +179,7 @@ body.page.scroll {
 #header{
 	position: relative;
 	background-attachment: fixed;
-	background-image: url('images/mountains.jpg'); 
+	background-image: url('../images/mountains.jpg'); 
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -246,7 +246,7 @@ body.page.scroll {
 	height: 600px;
 	background-color: white;
 	background-attachment: fixed;
-	background-image: url('images/white_bg.jpg'); 
+	background-image: url('../images/white_bg.jpg'); 
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
@@ -275,14 +275,14 @@ body.page.scroll {
 	max-width: 400px;
 	height: 400px;
 	border-radius: 0.5em; 
-	background-image: url('images/backpacking.jpg'); 
+	background-image: url('../images/backpacking.jpg'); 
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 0.5em;
 	flex-grow: 1;
 }
 #first .one{
-	background-image: url('images/camping.jpg'); 
+	background-image: url('../images/camping.jpg'); 
 	background-position: 40% 50%;
 	-moz-transition: all 700ms ease-out;
 	-webkit-transition: all 700ms ease-out;
@@ -307,7 +307,7 @@ body.page.scroll {
 	position: relative;
 	height: 300px;
 	background-attachment: fixed;
-	background-image: url('images/rock.jpg'); 
+	background-image: url('../images/rock.jpg'); 
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
@@ -344,7 +344,7 @@ body.page.scroll {
 	height: 1000px;
 	background-color: white;
 	background-attachment: fixed;
-	background-image: url('images/white_bg.jpg'); 
+	background-image: url('../images/white_bg.jpg'); 
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
@@ -354,7 +354,7 @@ body.page.scroll {
 
 #third .content {
 	height: 100%;
-	/*background-image:url("images/rock.jpg");
+	/*background-image:url("../images/rock.jpg");
 	opacity: 0.2;*/
 }
 
@@ -370,9 +370,27 @@ body.page.scroll {
 	left: 30%;
 }
 
+#third .one .details .circle{
+	width: 500px;
+}
+
+#third .one .details .text {
+	width: 375px;
+	margin: 5em;
+}
+
 #third .two {
 	top: 26%;
 	left: 40%;
+}
+
+#third .two .details .circle{
+	width: 300px;
+}
+
+#third .two .details .text {
+	width: 220px;
+	margin: 3em;
 }
 
 #third .three {
@@ -391,7 +409,16 @@ body.page.scroll {
 }
 
 #third .five .details{
-	top: -32em;
+	top: -28em;
+}
+
+#third .five .details .circle{
+	width: 350px;
+}
+
+#third .five .details .text {
+	width: 250px;
+	margin: 4em;
 }
 
 #third .details{
@@ -408,7 +435,7 @@ body.page.scroll {
 #third .details .text {
 	position: absolute;
 	color: white;
-	text-align: center;
+	text-align: justify;
 	width: 300px;
 	margin: 4em;
 }
@@ -424,7 +451,7 @@ body.page.scroll {
 	position: relative;
 	height: 300px;
 	background-attachment: fixed;
-	background-image: url('images/wood.jpg'); 
+	background-image: url('../images/wood.jpg'); 
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
@@ -439,7 +466,7 @@ body.page.scroll {
 	height: 400px;
 	background-color: white;
 	background-attachment: fixed;
-	background-image: url('images/white_bg.jpg'); 
+	background-image: url('../images/white_bg.jpg'); 
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
@@ -464,7 +491,7 @@ body.page.scroll {
 #footer{
 	position: relative;
 	height: 400px;
-	background-image: url('images/leaf4.jpg'); 
+	background-image: url('../images/leaf4.jpg'); 
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;

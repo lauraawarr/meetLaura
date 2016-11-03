@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Assignment 1</title>
-	<link rel='stylesheet' href='mainUpdated.css' />
+	<title>Meet Laura</title>
+	<link rel='stylesheet' href='_css/main.css' />
     <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="icon" href="images/Logo.ico"/>
@@ -10,13 +10,15 @@
 </head>
 <body class = "page scroll">
 	<div class="loading">
-		<img src="images/loading.gif"/>
-		<div class="fade"></div>
+	<div class="content">
+		<div id="spinner"></div>
+	</div>
+		
 	</div>
 
 	<div id="header">
 		<div class="circle">
-			<center><img align="middle" src="http://www.freeiconspng.com/uploads/cool-circle-designs-png-1.png"></center>
+			<center><img src="http://www.freeiconspng.com/uploads/cool-circle-designs-png-1.png"/></center>
 
 			<div class="container">
 				<h1>Laura Warr</h1>
@@ -25,32 +27,23 @@
 			</div>
 		</div>
 		
-		<div id = "explore" width ="200">
-			<h3>Scroll to explore</h3>
-			<center><img align="middle" src="images/down_arrow.png" alt="down_arrow"/></center>
+		<div id = "explore"  width ="200">
+			<!-- <h3>Scroll to explore</h3> -->
+			<img class="circle pulse" src="images/white_circle.svg" alt="circle"/>
+			<img class="arrow" src="images/down_arrow.png" alt="down_arrow"/>
 		</div>
 	</div>
-	</div>
 	<div id="first">
-		<!-- <img class = "circle bounce-up" width = "30%" src = "images/circle_image1.png" alt="circle"/>
-		<img class = "line one bounce-up" width = "25%" src = "images/line1.png"/>
-		<img class = "line two bounce-up" width = "25%" src = "images/line2.png"/>
-		<img class = "line three bounce-up" width = "25%" src = "images/line1.png"/> -->
 		<div class ="content">
+			<div class = "profile one bounce-right">
+			</div>
 			<div class="float-left">
-				<h2>A short intro...</h2>
+				<h2>About Me</h2>
 				<p>I'm a nerd and an explorer; my main passions in life have been numbers and the outdoors. I've been fortunate enough to have had my work take me from Orthopaedics research in China, to tree planting in northern BC. But if I were to be honest, my dream job would be studying math in the forest &mdash; alas, I have yet to find means to make a living doing this.</p>
 
 				<p>I aspire to live an active lifestyle; my spare time is typically filled with activities such as rock climbing, running, and swimming. I believe that the best way to spend one's time is outdoors, and I enjoy backpacking and camping whenever I have the opportunity.</p>
 			</div>
-			<div class="profile-images">
-				<div class = "profile one bounce-left">
-				</div>
-				<!-- <div class = "profile two bounce-left">
-				</div>
-				<div class= "profile three bounce-left"> -->
-				</div>
-			</div>
+			
 		</div>
 	</div>
 	<div id="second" class="banner">
@@ -58,41 +51,90 @@
 	</div>
 	<div id = "third">
 		<div class = "content">
-				<div class="work one float bounce-left">
-					<img class = "circle" width = "15%" src = "images/circle_design.png" alt="circle"/>
-					<h3>Market Analyst/Graphic Designer</h3>
-					<h4>DBRS Limited, Toronto, ON</h4>
-					<h4><i>August 2015 - December 2015 (co-op)</i></h4>
+				<div class="bullet one float bounce-left">
+					<div class = "work">
+						<img class = "circle" width = "15%" src = "images/circle_design.png" alt="circle"/>
+						<h3 class = "title">Market Analyst/Graphic Designer</h3>
+						<h4>DBRS Limited, Toronto, ON</h4>
+						<h4><i>August 2015 - December 2015 (co-op)</i></h4>
+					</div>
+					<div class = "grow details">
+						<img class = "circle" src = "images/blue_circle.svg" alt="circle"/>
+						<div class="text">
+							<h3>Details</h3>
+							<p>While at DBRS my time was divided between two roles. Half my time was spent designing a variety of marketing materials for print and web campaigns, the remainder was spent working closely with the Senior Market Analyst to create forecasting models.</p>
+
+							<p>During my term at DBRS I took the initiative to redesign the business development newsletter template. This resulted in subsequent publications being released more efficiently and improved the overall visual appeal.</p>
+
+							<p>One of my proudest achievements was when I was able to significantly reduce the time required to uploading web analytics to our database by familiarizing myself with VBA and writing an Excel macro to format the data automatically.</p>
+						</div>
+					</div>
 				</div>
-				<div class="work two float bounce-left">
-					<img class = "circle" width = "15%" src = "images/circle_design2.png" alt="circle"/>
-					<h3>QA Engineering</h3>
-					<h4>Bluecoat Systems, Waterloo, ON</h4>
-					<h4><i>May 2015 - August 2015 (co-op)</i></h4>
+
+				<div class="bullet two float bounce-right">
+					<div class = "work">
+						<img class = "circle" src = "images/circle_design2.png" alt="circle"/>
+						<h3 class = "title">QA Engineering</h3>
+						<h4>Bluecoat Systems, Waterloo, ON</h4>
+						<h4><i>May 2015 - August 2015 (co-op)</i></h4>
+					</div>
+					<div class = "grow details">
+						<img class = "circle" src = "images/blue_circle.svg" alt="circle"/>
+						<div class="text">
+							<h3>Details</h3>
+							<p>My time at Bluecoat allowed me to learn a lot about the world of software security.</p>
+							<p>I specialized in their Management Centre system, which required a working knowledge of all their other products in order to create comprehensive test reports.</p>
+						</div>
+					</div>
 				</div>
-				<div class="work three float bounce-left">
-					<img class = "circle" width = "15%" src = "images/circle_design3.png" alt="circle"/>
-					<h3>Research In Orthopaedics</h3>
-					<h4>Soochow University, Suzhou, Jiangsu, China</h4>
-					<h4><i>September 2014 - December 2014 (co-op)</i></h4>
+				<div class="bullet three float bounce-left">
+						<div class = "work">
+						<img class = "circle" src = "images/circle_design3.png" alt="circle"/>
+						<h3 class = "title">Research In Orthopaedics</h3>
+						<h4>Soochow University, Suzhou, Jiangsu, China</h4>
+						<h4><i>September 2014 - December 2014 (co-op)</i></h4>
+					</div>
+					<div class = "grow details">
+						<img class = "circle" src = "images/blue_circle.svg" alt="circle"/>
+						<div class="text">
+							<h3>Details</h3>
+							<p>Working at the Orthopaedic Institute was an incredible experience that challenged both my communication skills and my independent work ethic. I worked with one other team member to pilot a 3-D printed back brace for children with idiopathic scoliosis.</p>
+							<p>Our research included identifying gaps in current bracing technology, creatively using 3-D printing to find a solution, and working closely with the children's hospital to develop a prototype.</p>
+						</div>
+					</div>
 				</div>
-				<div class="work four float bounce-left">
-					<img class = "circle" width = "15%" src = "images/circle_design.png" alt="circle"/>
-					<h3>Quality Assurance Analyst</h3>
-					<h4>Maplesoft Inc., Waterloo, ON</h4>
-					<h4><i>January 2014 - April 2014 (co-op)</i></h4>
+				<div class="bullet four float bounce-right">
+					<div class = "work">
+						<img class = "circle" src = "images/circle_design.png" alt="circle"/>
+						<h3 class = "title">Quality Assurance Analyst</h3>
+						<h4>Maplesoft Inc., Waterloo, ON</h4>
+						<h4><i>January 2014 - April 2014 (co-op)</i></h4>
+					</div>
+					<div class = "grow details">
+						<img class = "circle" src = "images/blue_circle.svg" alt="circle"/>
+						<div class="text">
+							<h3>Details</h3>
+							<p>While at Maplesoft I specialized with their MapleSim software; a modeling and simulation tool used to provide insight into system behaviour. I relied on my math and physics background to test the workings of the software and write detailed test cases.</p>
+							<p>Challenges I faced were familiarizing myself with a variety of Maple software products and operating systems such as Linux, Mac, and Windows.
+							</p>
+						</div>
+					</div>
 				</div>
-				<div class="work five float bounce-left">
-					<img class = "circle" width = "15%" src = "images/circle_design2.png" alt="circle"/>
-					<h3>Web & Video Specialist - Marketing Liason</h3>
-					<h4>University of Waterloo, Waterloo, ON</h4>
-					<h4><i>April 2013 - August 2013 (co-op)</i></h4>
-				</div>
-				<div class="work six float bounce-left">
-					<img class = "circle" width = "15%" src = "images/circle_design3.png" alt="circle"/>
-					<h3>Tree Planter</h3>
-					<h4>Apex Reforestation, BC</h4>
-					<h4><i>May 2016 - August 2016</i></h4>
+				<div class="bullet five float bounce-left">
+					<div class = "work">
+						<img class = "circle" src = "images/circle_design2.png" alt="circle"/>
+						<h3 class = "title">Marketing Liason - Web & Video Specialist</h3>
+						<h4>University of Waterloo, Waterloo, ON</h4>
+						<h4><i>April 2013 - August 2013 (co-op)</i></h4>
+					</div>
+					<div class = "grow details">
+						<img class = "circle" src = "images/blue_circle.svg" alt="circle"/>
+						<div class="text">
+							<h3>Details</h3>
+							<p>As the Web & Video Specialist I was responsible for managing and growing the web content and evolving the campus-wide digital display network.</p>
+							<p>I also had the opportunity (thanks to my personal interest in the area) to organize and host multiple photo-shoots to gather timeless images for future campaigns.</p>
+						</div>
+					</div>
 				</div>
 		</div>
 	</div>
@@ -103,12 +145,12 @@
 	</div>
 	<div id="fifth">
 		<div class = "content">
-		<div class="edu one float">
+		<div class="edu bullet one float bounce-left">
 					<img class = "circle" width = "15%" src = "images/circle_design.png" alt="circle"/>
 					<h3>Sheridan College</h3>
-					<h4>Candidate for Post-Graduate Certificate, </br>Interactive Media Management</h4>
+					<h4>Candidate for Post-Graduate Certificate, <br />Interactive Media Management</h4>
 				</div>
-				<div class="edu two float">
+				<div class="edu bullet two float bounce-left">
 					<img class = "circle" width = "15%" src = "images/circle_design2.png" alt="circle"/>
 					<h3>University of Waterloo</h3>
 					<h4>Bachelors of Math, Applied Mathematics</h4>
@@ -118,7 +160,7 @@
 	</div>
 		<div id="footer">
 			<div class="content bounce-up">
-				<div class = "float-right">
+				<div class = "float-center">
 					<h1>Thanks for visiting!</h1>
 					<h3> Let's stay in touch!</h3>
 					<div class="icons">
@@ -133,11 +175,12 @@
 						</a>
 					</div>
 				</div>
-				<div class="fade"></div>
+				<div class="fadeBack"></div>
 			</div>
 		</div>
 	<!-- script -->
+	<script src='_javascript/mouse.js'></script>
 	<script src='_javascript/scroll.js'></script>
-	<script src='_javascript/resize.js'></script>
+	<script src='_javascript/other.js'></script>
 </body>
 </html>
