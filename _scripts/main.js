@@ -114,9 +114,12 @@ function respondToScroll(){
 			if (midInView) {
 				document.querySelectorAll('.nav-' + element.id)[0].style.color = '#87CEEB';
 				document.querySelectorAll('.nav-' + element.id)[1].style.color = '#87CEEB';
+				document.querySelectorAll('.nav-' + element.id)[0].style.borderBottom = '2px solid';
+				document.querySelectorAll('.nav-' + element.id)[0].style.paddingBottom = '2px';
 			} else {
 				document.querySelectorAll('.nav-' + element.id)[0].style.color = '#000';
 				document.querySelectorAll('.nav-' + element.id)[1].style.color = '#000';
+				document.querySelectorAll('.nav-' + element.id)[0].style.borderBottom = '0px';
 			};
 		};
 		
@@ -124,6 +127,20 @@ function respondToScroll(){
 
 
 }; // end respondToScroll
+
+
+////// Scrolls through projects on click ///////
+
+var projectArrows = document.querySelectorAll('.project-arrow');
+
+for (var i=0; i < projectArrows.length; i++){
+	projectArrows[i].addEventListener('click', scrollOnClick);
+};
+
+function scrollOnClick(ev){
+	var dir;
+	(ev.target == projectArrows[0]) ? dir = -1 : dir = 1;
+};
 
 
 

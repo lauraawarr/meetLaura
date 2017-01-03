@@ -71,6 +71,28 @@ a:hover{
 	z-index: 100;
 }
 
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  
+  border-left: 40px solid white;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent; 
+  
+  border-right:40px solid white; 
+}
+
+.project-arrow {
+	opacity: 1;
+}
+
 .event {
 	border-radius: 100%;
 	background: #fff;
@@ -168,7 +190,7 @@ body, html {
 #header{
 	position: relative;
 	background-attachment: fixed;
-	background-image: url('../_images/_background/mountains.jpg'); 
+	background-image: url('../_images/_background/main2.jpg'); 
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -187,14 +209,14 @@ body, html {
 	color: #fff;
 	font-size: 5em;
 	font-weight: bold;
-	text-shadow: 2px 2px 5px #000;
+	text-shadow: 4px 4px 10px #000;
 
 } 
 
 #subheader {
 	color: #fff;
 	font-size: 2em;
-	text-shadow: 2px 2px 5px #000;
+	text-shadow: 2px 2px 4px #000;
 	margin: 0.5em;
 }
 
@@ -202,7 +224,7 @@ body, html {
 #aboutme{
 	position: relative;
 	background-attachment: fixed;
-	background-image: url('../_images/_background/rock.jpg'); 
+	background-image: url('../_images/_background/about.jpeg'); 
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -243,14 +265,14 @@ body, html {
 	width: 50%;
 	max-width: 30em;
 	margin: 1em;
-	text-shadow: 2pt 2pt 2pt #000;
+	text-shadow: 2px 2px 5px #000;
 }
 
 /*PROJECTS*/
 #projects{
 	position: relative;
 	background-attachment: fixed;
-	background-image: url('../_images/_background/wood.jpg');
+	background-image: url('../_images/_background/wood2.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -312,6 +334,13 @@ body, html {
 	background-position: center;
 }
 
+#music-planet {
+	background: url('../_images/_background/musicPlanet.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .project a:hover{
 	color: #fff;
 	background: #000;
@@ -322,7 +351,7 @@ body, html {
 #experience{
 	position: relative;
 	background-attachment: fixed;
-	background-image: url('../_images/_background/leaf.jpg'); 
+	background-image: url('../_images/_background/leaf2.jpeg'); 
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -384,7 +413,7 @@ body, html {
 #education{
 	position: relative;
 	background-attachment: fixed;
-	background-image: url('../_images/_background/water.jpg'); 
+	background-image: url('../_images/_background/rock3.jpg'); 
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -435,7 +464,7 @@ body, html {
 #footer{
 	position: relative;
 	background-attachment: fixed;
-	background-image: url('../_images/_background/forest.jpg'); 
+	background-image: url('../_images/_background/forest3.jpg'); 
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -467,8 +496,14 @@ body, html {
 	}
 }
 
-#footer .icons {
+#footer .icons img{
 	text-align: center;
+	border-radius: 5px;
+	margin: 0 2px;
+}
+
+#footer .icons img:hover{
+	box-shadow: #fff 0px 0px 10px;
 }
 
 /*ANIMATIONS*/
