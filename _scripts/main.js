@@ -1,3 +1,5 @@
+window.addEventListener('load', fadeLoading);
+
 window.addEventListener('scroll', respondToScroll);
 
 var positionElements = document.querySelectorAll('.main-section');
@@ -29,6 +31,14 @@ for (var i = 0; i < links.length; i++){
 	}); //end event listener
 }; //end loop over links
 
+
+function fadeLoading(){
+	var loading = document.querySelector('#loading');
+	loading.classList.add('fadeOut');
+	setTimeout(function(){
+		document.querySelector('body').removeChild(loading);
+	},800);
+};
 
 function respondToScroll(){
 	//defines total distance scrolled and height of document
