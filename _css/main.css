@@ -252,7 +252,7 @@ body, html {
 
 #header .icons {
 	position: absolute;
-	bottom: 1em;
+	top: 1em;
 	right: 5em;
 }
 
@@ -366,7 +366,8 @@ body, html {
 	}
 }
 
-.project{
+.project {
+	display: block;
 	height: 20em;
 	width: 20em;
 	background: #fff;
@@ -374,6 +375,7 @@ body, html {
 	margin: 2em;
 	align-items: center;
 	justify-content: center;
+	box-shadow: 5px 5px 10px #000;
 }
 
 .project a{
@@ -383,29 +385,45 @@ body, html {
 	text-align: center;
 	justify-content: center;
 	align-items: center;
+
+}
+
+.project a:hover .frost{
+	visibility: visible;
 }
 
 .project h4 {
 	margin: 0.5em auto;
 }
 
+.frost {
+	position: absolute;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+}
+
 #motif {
 	background: url('../_images/_background/motif.png');
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #explore-more {
 	background: url('../_images/_background/explore-more.png');
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #music-planet {
 	background: url('../_images/_background/musicPlanet.png');
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
