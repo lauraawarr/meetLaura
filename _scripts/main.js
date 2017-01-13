@@ -36,26 +36,6 @@ for (var i = 0; i < links.length; i++){
 }; //end loop over links
 
 
-var headerCircles = document.querySelectorAll('.header-circle');
-var mainProjects = document.querySelectorAll('.main-project');
-var shiftClasses = ['right', 'left'];
-
-headerCircles[0].addEventListener('mouseover', function(){
-	mainProjects[0].style.right = '65%' 
-});
-
-headerCircles[1].addEventListener('mouseover', function(){
-	mainProjects[1].style.left = '65%' 
-});
-
-headerCircles[0].addEventListener('mouseout', function(){
-	mainProjects[0].style.right = '100%';
-});
-
-headerCircles[1].addEventListener('mouseout', function(){
-	mainProjects[1].style.left = '100%';
-});
-
 function onLoad(){
 	$('html').animate({scrollTop:0}, 1);
     $('body').animate({scrollTop:0}, 1);
@@ -73,7 +53,7 @@ function respondToScroll(){
 	var bottomScroll = topScroll+windowHeight;
 	var totalHeight = document.querySelector('body').offsetHeight;
 
-	//var perScroll = topScroll/(totalHeight-windowHeight) * 100;
+	var perScroll = topScroll/(totalHeight-windowHeight) * 100;
 
 	//splits query selected list into parts and creates new array (in order to concat later)
 	var bounceUp = Array.prototype.slice.call(document.querySelectorAll('.bounce-up'));
@@ -105,22 +85,22 @@ function respondToScroll(){
 		}
 	}; //end for loop
 
-	var content = document.querySelectorAll('.content');
+// 	var content = document.querySelectorAll('.content');
 	var nav = document.querySelector('#nav-bar');
 	var navHeight = nav.offsetHeight;
 
-	var n = window.scrollY;
-	var m;
+// 	var n = window.scrollY;
+// 	var m;
 
-	for( var i = 0; i < content.length; i++ ) {
-		var n = window.scrollY;
-		m = content[i].parentElement.dataset.top;
-		content[i].style.webkitTransform = "translate3d(0," + (n - m)+"px, 0)";
-		content[i].style.MozTransform = "translate3d(0," + (n - m)+"px, 0)";
-		content[i].style.OTransform = "translate3d(0," + (n - m)+"px)";
-		content[i].style.msTransform = "translate3d(0." + (n - m)+"px)";
-		content[i].style.transform = "translate3d(0," + (n - m)+"px, 0)";
-	};
+// 	for( var i = 0; i < content.length; i++ ) {
+// 		var n = window.scrollY;
+// 		m = content[i].parentElement.dataset.top;
+// 		content[i].style.webkitTransform = "translate3d(0," + (n - m)+"px, 0)";
+// 		content[i].style.MozTransform = "translate3d(0," + (n - m)+"px, 0)";
+// 		content[i].style.OTransform = "translate3d(0," + (n - m)+"px)";
+// 		content[i].style.msTransform = "translate3d(0." + (n - m)+"px)";
+// 		content[i].style.transform = "translate3d(0," + (n - m)+"px, 0)";
+// 	};
 
 	if (topScroll < windowHeight){
 		nav.classList.add('hidden');
