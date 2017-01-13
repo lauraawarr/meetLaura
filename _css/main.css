@@ -252,7 +252,7 @@ body, html {
 #header{
 	position: relative;
 	background-attachment: fixed;
-	background-image: url('../_images/_background/main3.jpg'); 
+	background-image: url('../_images/_background/main_mask.jpg'); 
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -265,6 +265,11 @@ body, html {
 	text-align: center;
 	justify-content: center;
 	z-index: 11;
+}
+
+#header .content{
+	justify-content: space-around;
+	align-items: center;
 }
 
 #name {
@@ -280,6 +285,53 @@ body, html {
 	font-size: 2em;
 	text-shadow: 2px 2px 4px #000;
 	margin: 0.5em;
+}
+
+.header-circle {
+	height: 4em;
+	width: 4em;
+	border: 3px solid #fff;
+	position: relative;
+	-moz-transition: all 200ms ease-out;
+	-webkit-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
+	transition: all 200ms ease-out;
+}
+
+.header-circle:hover {
+	background-color: rgba(256,256,256,0.4);
+}
+
+.left {
+	background: url('../_images/_icons/left.png') no-repeat 40% 50%;
+	background-size: 40%;
+}
+
+.right {
+	background: url('../_images/_icons/right.png') no-repeat 60% 50%;
+	background-size: 40%;
+}
+
+.main-project{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	-moz-transition: all 800ms ease-out;
+	-webkit-transition: all 800ms ease-out;
+	-o-transition: all 800ms ease-out;
+	transition: all 800ms ease-out;
+}
+
+#project-right {
+	background: url('../_images/_projects/motif.png');
+	background-size: cover;
+	left: 100%;
+}
+
+#project-left {
+	background: url('../_images/_projects/motif.png');
+	background-size: cover;
+	right: 100%;
 }
 
 /*ABOUT ME*/
@@ -360,13 +412,19 @@ body, html {
 }
 
 .project{
-	height: 20em;
-	width: 20em;
-	background: #fff;
-	background: rgba(256,256,256,0.6);
-	margin: 2em;
-	align-items: center;
-	justify-content: center;
+	height: 100vh;
+	width: 80%;
+	margin: 0 ; 
+	margin-top: 5em;
+	/*background: #fff;
+	background: rgba(256,256,256,0.6);*/
+	/*background-image: url('../_images/_projects/motif.png');*/
+	background-position: 50% 50%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	/*margin: 2em;*/
+	/*align-items: center;
+	justify-content: center;*/
 }
 
 .project a{
@@ -383,14 +441,14 @@ body, html {
 }
 
 #motif {
-	background: url('../_images/_background/motif.png');
+	background: url('../_images/_projects/motif.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #explore-more {
-	background: url('../_images/_background/explore-more.png');
+	background: url('../_images/_projects/exploremore.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;

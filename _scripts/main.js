@@ -1,4 +1,4 @@
-window.addEventListener('load', fadeLoading);
+window.addEventListener('load', onLoad);
 
 window.addEventListener('scroll', respondToScroll);
 
@@ -8,7 +8,7 @@ for( var i = 0; i < positionElements.length; i++ ) {
 };
 
 var links = document.querySelectorAll('a');
-var hash, element, elementHeight, elementTop, elementBottom;
+var hash, element, elementHeight, elementTop, elementBottom, start, finish;
 
 for (var i = 0; i < links.length; i++){
 	links[i].addEventListener('click', function(ev){
@@ -19,7 +19,11 @@ for (var i = 0; i < links.length; i++){
 
 			//store hash
 			hash = ev.target.hash;
+			start = window.pageYOffset;
+			finish = document.querySelector(hash).getBoundingClientRect().top
 			console.log(hash)
+
+			console.log(start, finish);
 
 			$('html, body').animate({
 		        scrollTop: $(hash).offset().top
@@ -32,7 +36,29 @@ for (var i = 0; i < links.length; i++){
 }; //end loop over links
 
 
-function fadeLoading(){
+var headerCircles = document.querySelectorAll('.header-circle');
+var mainProjects = document.querySelectorAll('.main-project');
+var shiftClasses = ['right', 'left'];
+
+headerCircles[0].addEventListener('mouseover', function(){
+	mainProjects[0].style.right = '65%' 
+});
+
+headerCircles[1].addEventListener('mouseover', function(){
+	mainProjects[1].style.left = '65%' 
+});
+
+headerCircles[0].addEventListener('mouseout', function(){
+	mainProjects[0].style.right = '100%';
+});
+
+headerCircles[1].addEventListener('mouseout', function(){
+	mainProjects[1].style.left = '100%';
+});
+
+function onLoad(){
+	$('html').animate({scrollTop:0}, 1);
+    $('body').animate({scrollTop:0}, 1);
 	var loading = document.querySelector('#loading');
 	loading.classList.add('fadeOut');
 	setTimeout(function(){
@@ -151,6 +177,16 @@ function scrollOnClick(ev){
 	var dir;
 	(ev.target == projectArrows[0]) ? dir = -1 : dir = 1;
 };
+
+//// Google Analytics //////
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-89881513-1', 'auto');
+ga('send', 'pageview');
+
 
 
 
