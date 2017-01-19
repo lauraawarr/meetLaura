@@ -5,6 +5,8 @@ h1 {
     font-size: 3.16em;
     text-align: center;
     opacity: 1;
+    -webkit-text-shadow: 2px 2px 3px black;
+    -moz-text-shadow: 2px 2px 3px black;
     text-shadow: 2px 2px 3px black;
     }
 
@@ -119,6 +121,8 @@ body, html {
 	min-width: 500px;
 	display: inline-block;
     margin: 0px auto;
+    -webkit-box-shadow: 0px 5px 10px #1c1c1c;
+    -moz-box-shadow: 0px 5px 10px #1c1c1c;
 	box-shadow:0px 5px 10px #1c1c1c;
 
 	font-family: "Syncopate", sans-serif;
@@ -211,6 +215,8 @@ body, html {
 	position: absolute;
 	border-right: none;
 	border-top: none;
+	left: 50%;
+	top: 50%;
 }
 
 @-webkit-keyframes spin{
@@ -226,6 +232,10 @@ body, html {
 .big-circle{
 	height: 10em;
 	width: 10em;
+
+	margin-top: -5em;
+	margin-left: -5em; /* Minus half width/height*/   
+
 	animation: spin 2s;
 	animation-iteration-count: infinite;
 	animation-timing-function:linear;
@@ -234,6 +244,10 @@ body, html {
 .medium-circle{
 	height: 8em;
 	width: 8em;
+
+	margin-top: -4em;
+	margin-left: -4em; /* Minus half width/height*/  
+
 	animation: spin 1s;
 	animation-iteration-count: infinite;
 	animation-timing-function:linear;
@@ -242,6 +256,10 @@ body, html {
 .small-circle{
 	height: 6em;
 	width: 6em;
+
+	margin-top: -3em;
+	margin-left: -3em; /* Minus half width/height*/ 
+
 	animation: spin 750ms;
 	animation-iteration-count: infinite;
 	animation-timing-function:linear;
@@ -278,6 +296,8 @@ body, html {
 	color: #fff;
 	font-size: 5em;
 	font-weight: bold;
+	-webkit-text-shadow: 4px 4px 10px #000;
+    -moz-text-shadow: 4px 4px 10px #000;
 	text-shadow: 4px 4px 10px #000;
 
 } 
@@ -285,6 +305,8 @@ body, html {
 #subheader {
 	color: #fff;
 	font-size: 2em;
+	-webkit-text-shadow: 2px 2px 4px #000;
+    -moz-text-shadow: 2px 2px 4px #000;
 	text-shadow: 2px 2px 4px #000;
 	margin: 0.5em;
 }
@@ -326,6 +348,8 @@ body, html {
 	height: 20em;
 	width: 20em;
 	margin: 1em;
+	-webkit-box-shadow: 2pt 2pt 10pt #000;
+    -moz-box-shadow: 2pt 2pt 10pt #000;
 	box-shadow: 2pt 2pt 10pt #000;
 }
 
@@ -334,6 +358,8 @@ body, html {
 	width: 50%;
 	max-width: 30em;
 	margin: 1em;
+	-webkit-text-shadow: 2px 2px 5px #000;
+    -moz-text-shadow: 2px 2px 5px #000;
 	text-shadow: 2px 2px 5px #000;
 }
 
@@ -345,9 +371,9 @@ body, html {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
-	min-height: 700px;
+	/*min-height: 700px;*/
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -358,6 +384,7 @@ body, html {
 #projects .content {
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 } 
 
 @media screen and (max-width: 750px){
@@ -367,7 +394,7 @@ body, html {
 }
 
 .project {
-	display: block;
+	display: inline-block;
 	height: 20em;
 	width: 20em;
 	background: #fff;
@@ -375,6 +402,8 @@ body, html {
 	margin: 2em;
 	align-items: center;
 	justify-content: center;
+	-webkit-box-shadow:5px 5px 10px #000;
+    -moz-box-shadow:5px 5px 10px #000;
 	box-shadow: 5px 5px 10px #000;
 }
 
@@ -408,21 +437,35 @@ body, html {
 }
 
 #motif {
-	background: url('../_images/_background/motif.png');
+	background: url('../_images/_projects/motif.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #explore-more {
-	background: url('../_images/_background/explore-more.png');
+	background: url('../_images/_projects/exploreMore.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #music-planet {
-	background: url('../_images/_background/musicPlanet.png');
+	background: url('../_images/_projects/musicPlanet.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#up-game {
+	background: url('../_images/_projects/upGame.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#interactive-logo {
+	background: url('../_images/_projects/interactiveLogo.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -457,10 +500,21 @@ body, html {
 	justify-content: center;
 }
 
-#event-list{
+.event-list{
 	position: absolute;
 }
-#event-list * {
+
+#experience .event-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	height: 40em;
+	top: 0;
+	/*margin-top: -33em;*/
+}
+
+#experience .event-list * {
 	margin-bottom: 0.5em; 
 }
 
@@ -473,6 +527,8 @@ body, html {
 
 .job * {
 	color: #fff;
+	-webkit-text-shadow:2px 2px 5px #000;
+    -moz-text-shadow:2px 2px 5px #000;
 	text-shadow: 2px 2px 5px #000;
 	text-align: left;
 	font-weight: bold;
@@ -517,10 +573,14 @@ body, html {
 	align-items: center;
 }
 
-#education #event-list {
+#education .event-list {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+
+	height: 30em;
+	top: 50%;
+	margin-top: -15em;
 }
 
 #education .content {
@@ -538,6 +598,8 @@ body, html {
 
 .edu * {
 	color: #fff;
+	-webkit-text-shadow: 2px 2px 5px #000;
+    -moz-text-shadow: 2px 2px 5px #000;
 	text-shadow: 2px 2px 5px #000;
 	text-align: left;
 	font-weight: bold;
@@ -591,6 +653,8 @@ body, html {
 }
 
 .icons img:hover{
+	-webkit-box-shadow: #fff 0px 0px 10px;
+    -moz-box-shadow: #fff 0px 0px 10px;
 	box-shadow: #fff 0px 0px 10px;
 }
 
