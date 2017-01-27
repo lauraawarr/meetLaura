@@ -1,3 +1,17 @@
+@font-face { 
+	font-family: 'Amatic SC';
+	src: url('../fonts/Amatic_SC/AmaticSC-Regular.ttf'); 
+} 
+@font-face { 
+	font-family: 'Amatic SC';
+	font-weight: bold; 
+	src: url('../fonts/Amatic_SC/AmaticSC-Bold.ttf');
+}
+@font-face { 
+	font-family: 'Overpass';
+	src: url('../fonts/Overpass/Overpass-Bold.ttf'); 
+}
+
 /* TAGS */
 a {
 	text-decoration: none;
@@ -44,7 +58,7 @@ body * {
 #header {
 	position: relative;
 	margin: 0;
-	background-color: #79CED9;
+	background-color: #66cccc;
 	min-height: 90vh;
 	color: #fff;
 	overflow: visible;
@@ -58,12 +72,23 @@ body * {
 }
 
 #header .content {
-	margin: 20vh auto;
-    height: 50vh;
+    margin: auto;
+    margin-top: -2vh;
+    margin-bottom: 10vh;
+    min-height: 80vh;
 	width: 100%;
 	max-width: 1000px;
 	position: relative;
 	top: 20%;
+	z-index: 1;
+
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
 }
 
 #header .line {
@@ -90,12 +115,13 @@ body * {
 #name {
 	display: flex;
 	flex-direction: column;
+	padding-top: 2em;
 }
 
 #name h1{
 	position: relative;
 	font-size: 4em;
-	margin: 0.1em;
+	margin: 0 0.1em;
 	text-align: center;
 	font-family: 'Overpass', sans-serif;
 }
@@ -104,6 +130,13 @@ body * {
 	text-align: center;
 	margin: 0 auto;
 	max-width: 1200px;
+}
+
+#projects .ajaxForm {
+	background: url('../images/projects/ajaxForm.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 #projects .bSolutions {
@@ -147,6 +180,7 @@ body * {
 	justify-content: center;
 	text-align: center;
 	font-size: 1.5em;
+	padding-bottom: 2em;
 }
 
 #subheader * {
@@ -163,7 +197,15 @@ body * {
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
 
-	border-top: 50px solid #79CED9;
+	border-top: 50px solid #66cccc;
+}
+
+#writing {
+	opacity: 0;
+}
+
+#writing *{
+	display: inline;
 }
 
 /* CLASSES */
@@ -199,7 +241,8 @@ body * {
 }
 
 .logo {
-	display: none;
+	display: inline-block;
+	opacity: 0;
 	height: 5em;
 	margin-left: 0.5em;
 	margin-top: 0.5em;
@@ -345,6 +388,7 @@ body * {
 
 	.logo {
 		display: inline-block;
+		opacity: 1;
 	}
 
 }
@@ -412,6 +456,22 @@ body * {
 		width: 60vw;
 	}
 	
+}
+
+@media screen and (min-height: 600px){
+	#subheader {
+		opacity: 0;
+	}
+
+	#writing {
+		opacity: 1;
+	}
+}
+
+@media screen and (min-height: 700px){
+	#name {
+		padding-top: 0;
+	}
 }
 
 @media screen and (min-width: 770px){
